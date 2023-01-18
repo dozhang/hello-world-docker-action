@@ -2,12 +2,11 @@ name: CI Build for Docker Action
 on:
   push:
     branches: [ main ]
-    paths: [ hello-world-docker-action/** ]
   workflow_dispatch:
         
 jobs:
   test-action:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3.0.2
